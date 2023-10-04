@@ -6,6 +6,17 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
+    "paths": {
+      "@/*": ["./src/*", "./dist/*"],
+      "routes/*": ["./src/routes/*"],
+      "components/*": ["./src/components/*"],
+      "api/*": ["./src/api/*"],
+      "theme/*": ["./src/theme/*"],
+      "assets/*": ["./src/assets/*"],
+      "utils/*": ["./src/utils/*"],
+      "store/*": ["./src/store/*"]
+    },
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -20,6 +31,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "prettier.config.cjs"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
