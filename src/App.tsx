@@ -9,7 +9,7 @@ const App = (): JSX.Element => {
       theme={{
         token: {
           colorPrimary: '#0ad6ef',
-          colorBgContainer: 'gold',
+          colorBgContainer: '#9ad8e7',
           colorBgLayout: 'whitesmoke',
         },
       }}

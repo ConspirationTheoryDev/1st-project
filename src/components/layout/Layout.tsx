@@ -1,8 +1,16 @@
 import { Button, Layout as LayoutAntD, Menu } from 'antd'
-import { GiSteeltoeBoots, GiClothes, GiSoccerBall } from 'react-icons/gi'
+import {
+  GiSteeltoeBoots,
+  GiClothes,
+  GiSoccerBall,
+  GiCutDiamond,
+} from 'react-icons/gi'
 import { AiOutlineMenuUnfold } from 'react-icons/ai'
+import { MdWorkspacePremium, MdOutlineContentCut } from 'react-icons/md'
 import { useState } from 'react'
 import { theme } from 'antd'
+import { Category } from './Category/Category'
+import { Banner } from '../Banner/Banner'
 
 export const Layout = (): JSX.Element => {
   const [collapsed, setCollapsed] = useState<boolean>(true)
@@ -24,17 +32,32 @@ export const Layout = (): JSX.Element => {
             {
               key: '1',
               icon: <GiSteeltoeBoots />,
-              label: 'nav 1',
+              label: 'Obuwie',
             },
             {
               key: '2',
               icon: <GiClothes />,
-              label: 'nav 2',
+              label: 'Odzież',
             },
             {
               key: '3',
               icon: <GiSoccerBall />,
-              label: 'nav 3',
+              label: 'Sport',
+            },
+            {
+              key: '4',
+              icon: <GiCutDiamond />,
+              label: 'Akcesoria',
+            },
+            {
+              key: '5',
+              icon: <MdWorkspacePremium />,
+              label: 'Premium',
+            },
+            {
+              key: '6',
+              icon: <MdOutlineContentCut />,
+              label: 'Promocje',
             },
           ]}
         />
@@ -56,6 +79,7 @@ export const Layout = (): JSX.Element => {
               height: 64,
             }}
           />
+          <Category />
         </LayoutAntD.Header>
         <LayoutAntD.Content
           style={{
@@ -65,7 +89,7 @@ export const Layout = (): JSX.Element => {
             background: token.colorBgLayout,
           }}
         >
-          Content
+          <Banner />
         </LayoutAntD.Content>
       </LayoutAntD>
     </LayoutAntD>

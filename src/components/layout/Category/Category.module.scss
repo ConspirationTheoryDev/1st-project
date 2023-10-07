@@ -1,0 +1,13 @@
+.group {
+  background-color: white;
+}
+.button {
+  background-color: white;
+}
+.button > span[class~='ant-radio-button-checked'] {
+  background-color: gold;
+}
+
+.button span:last-child {
+  color: black;
+}
